@@ -1,22 +1,23 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-
 const Login = () => {
-    const navigate=useNavigate();
-    const navigateToRegister=()=>{
-        navigate("/register")
-    }
-    
-    const successLogin=()=>{
-        navigate("/register/admin");
-    }
+  const navigate = useNavigate();
+  const navigateToRegister = () => {
+    navigate("/register");
+  };
 
+  const successLogin = () => {
+    navigate("/register/admin");
+  };
 
   return (
-    <div className="h-[100vh] bg-[#fdfdf5] ">
-      <div id="bgImg" className="h-[50%] "></div>
-      <div className="h-[20rem] p-3 ">
+    <div className="h-[100vh] bg-cust-white cmd:flex cmd:flex-row-reverse">
+      <div
+        id="bgImg"
+        className="h-[50%] sm:w-[100%] xs:h-[70%] sm:h-[77%] md:h-[87%] cmd:h-[100%] cmd:w-[50%]"
+      ></div>
+      <div className="h-[33rem] xs:w-[28rem] xs:mx-auto sm:w-[32rem] sm:mx-auto md:w-[35rem] md:mx-auto cmd:w-[33rem] cmd:pt-[8rem] p-3">
         <div className="h-[3rem] my-2  flex justify-start items-center">
           <img className="h-[3.8rem]" src="logo.png" alt="No image" />
         </div>
@@ -24,9 +25,12 @@ const Login = () => {
           <h1 className="font-bold text-[1.7rem]">Login Here.</h1>
           <p className="text-[14px]">
             <span>doesn't have an acount ?</span>
-            <span onClick={navigateToRegister} className="font-semibold underline text-yellow-500">
-                
-                Sign up</span>
+            <span
+              onClick={navigateToRegister}
+              className="font-semibold underline text-darkYellow"
+            >
+              Sign up
+            </span>
           </p>
         </div>
         <div className="h-[14rem] my-2 ">
@@ -46,7 +50,7 @@ const Login = () => {
               />
             </div>
 
-            <button  className="h-[2.5rem] w-[7rem] ml-1 mt-4 rounded-full font-semibold bg-[#dcd562]">
+            <button className="h-[2.5rem] w-[7rem] ml-1 mt-4 rounded-full font-semibold bg-cust-yellow">
               Login
             </button>
           </form>

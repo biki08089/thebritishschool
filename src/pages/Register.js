@@ -4,25 +4,34 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Register = ({ setShowMenu }) => {
-  const navigate=useNavigate();
-const navigatetoLogin=()=>{
-  navigate("/login")
-}
+  const navigate = useNavigate();
+  const navigatetoLogin = () => {
+    navigate("/login");
+  };
 
   useEffect(() => {
     setShowMenu(false);
   }, []);
   return (
-    <div className="h-[100vh] bg-[#fdfdf5] ">
-      <div id="bgImg" className="h-[50%] "></div>
-      <div className="h-[33rem] p-3 ">
+    <div className="h-[100vh] bg-cust-white cmd:flex cmd:flex-row-reverse">
+      <div
+        id="bgImg"
+        className="h-[50%] sm:w-[100%] xs:h-[70%] sm:h-[77%] md:h-[87%] cmd:h-[100%] cmd:w-[50%] "
+      ></div>
+      <div className="h-[33rem] xs:w-[28rem] xs:mx-auto sm:w-[32rem] sm:mx-auto md:w-[35rem] md:mx-auto cmd:w-[40rem] cmd:pt-[6rem] p-3 ">
         <div className="h-[3rem] my-2  flex justify-start items-center">
           <img className="h-[3.8rem]" src="logo.png" alt="No image" />
         </div>
         <div className="h-[4rem] my-3 ">
           <h1 className="font-bold text-[1.7rem]">Register Form</h1>
           <p className="text-[14px]">
-            Already have an acount ?<span onClick={navigatetoLogin} className="font-semibold underline text-yellow-500">login</span>
+            Already have an acount ?
+            <span
+              onClick={navigatetoLogin}
+              className="font-semibold underline text-darkYellow"
+            >
+              login
+            </span>
           </p>
         </div>
         <div className="h-[18rem] my-2 ">
@@ -62,7 +71,6 @@ const navigatetoLogin=()=>{
                 type="password"
                 className="w-[100%] mb-2 h-[2.9rem] rounded-lg p-2 border-2"
               />
-             
             </div>
 
             <div className="flex px-2 ">
